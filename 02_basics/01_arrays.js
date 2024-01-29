@@ -14,13 +14,13 @@ const myArr2 = new Array(1, 2, 3, 4)
 // myArr.push(7)
 // myArr.pop()
 
-// myArr.unshift(9)
-// myArr.shift()
+// myArr.unshift(9)   (To insert number at start of the array)
+// myArr.shift()   (Removes number from start)
 
-// console.log(myArr.includes(9));
-// console.log(myArr.indexOf(3));
+// console.log(myArr.includes(9));    (gives true or false)
+// console.log(myArr.indexOf(3));  (gives negative if not present)
 
-// const newArr = myArr.join()
+// const newArr = myArr.join()     (add all element into string with separator and return it)
 
 // console.log(myArr);
 // console.log( newArr);
