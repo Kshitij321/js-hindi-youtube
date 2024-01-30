@@ -3,7 +3,7 @@ const user = {
     price: 999,
 
     welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`);
+        console.log(`${this.username} , welcome to website`);                   //(Here "this" refer to current object,which is being currently used)
         console.log(this);
     }
 
@@ -13,9 +13,20 @@ const user = {
 // user.username = "sam"
 // user.welcomeMessage()
 
-// console.log(this);
 
-// function chai(){
+
+
+
+
+
+
+
+
+//IMP---------------------------------------------------------------------------------------------------------------------------
+// console.log(this);                                                         //"this" in node environment refers to empty object {}
+                                                                              //"this" in browser environment refers to window object 
+
+// function chai(){                                                          //Here "this" prints undefined(means we cant use it here
 //     let username = "hitesh"
 //     console.log(this.username);
 // }
@@ -23,27 +34,36 @@ const user = {
 // chai()
 
 // const chai = function () {
-//     let username = "hitesh"
+//     let username = "hitesh"                                                  //Here "this" prints undefined(means we cant use it here
 //     console.log(this.username);
 // }
 
 const chai =  () => {
-    let username = "hitesh"
+    let username = "hitesh"                                                    //Here we get empty object {}(ARROW FUNCTION)
     console.log(this);
 }
 
 
 // chai()
 
-// const addTwo = (num1, num2) => {
-//     return num1 + num2
+
+
+
+
+
+
+
+
+//EXPLICIT VS IMPLICIT RETURN-------------------------------------------------------------------------------------------------------
+// const addTwo = (num1, num2) => {                     
+//     return num1 + num2                                                    (Explicit return)
 // }
 
-// const addTwo = (num1, num2) =>  num1 + num2
+// const addTwo = (num1, num2) =>  num1 + num2                               (Implicit return)
 
-// const addTwo = (num1, num2) => ( num1 + num2 )
+// const addTwo = (num1, num2) => ( num1 + num2 )                           (Implicit return)
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+const addTwo = (num1, num2) => ({username: "hitesh"})                       //(we must return an object when wrapped in brackets "()")
 
 
 console.log(addTwo(3, 4))
