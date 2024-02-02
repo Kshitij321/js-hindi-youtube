@@ -1,11 +1,17 @@
 // for of
 
-// ["", "", ""]
-// [{}, {}, {}]
+// ["", "", ""]                        (array of strings)
+// [{}, {}, {}]                        (array of objects)
+
+
+
+
+
+//for of loop-------------------------------------------------------------------------------------------------------------------------------
 
 const arr = [1, 2, 3, 4, 5]
 
-for (const num of arr) {
+for (const num of arr) {                //(for of loop)
     //console.log(num);
 }
 
@@ -14,7 +20,16 @@ for (const greet of greetings) {
     //console.log(`Each char is ${greet}`)
 }
 
-// Maps
+
+
+
+
+
+
+
+
+
+// Maps----------------------------------------------------------------------------------------------------------
 
 const map = new Map()
 map.set('IN', "India")
@@ -25,7 +40,7 @@ map.set('IN', "India")
 
 // console.log(map);
 
-for (const [key, value] of map) {
+for (const [key, value] of map) {                                       //(Traversing map) (FOR OF LOOP)
     // console.log(key, ':-', value);
 }
 
