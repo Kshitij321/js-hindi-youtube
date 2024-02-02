@@ -1,28 +1,31 @@
 // const coding = ["js", "ruby", "java", "python", "cpp"]
 
 
-// const values = coding.forEach( (item) => {
+// const values = coding.forEach( (item) => {                                                //(forEach loop does not return anything)
 //     //console.log(item);
 //     return item
 // } )
 
 // console.log(values);
 
+
+
+
+
+
+
+//filter method returns values , unlike forEach
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => {
+// const newNums = myNums.filter( (num) => {                                  //(explicit return)(scope opened so we have to write return keyword)                                
 //     return num > 4
 // } )
+              //'or'
 
-// const newNums = []
+//const newNums=myNums.filter((nums)=> nums>4)                                   //(implicit return)
 
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums.push(num)
-//     }
-// } )
 
-// console.log(newNums);
+
 
 
 const books = [
