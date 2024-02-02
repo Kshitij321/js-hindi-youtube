@@ -49,7 +49,7 @@ const myObject = {
     game2: 'Spiderman'
 }
 
-// for (const [key, value] of myObject) {
+// for (const [key, value] of myObject) {                                       (IMP--- we cant iterate objects with "for of" loop)(we use for in loop)
 //     console.log(key, ':-', value);
     
 // }
