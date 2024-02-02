@@ -1,10 +1,14 @@
+//FOR EACH LOOP-----------------------------------------------------------------------------------------------------
+//(This loop is most used with arrays)
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
-// coding.forEach( function (val){
+//For each loop takes callback function as argument (function to execute for each element of array and without name)
+
+// coding.forEach( function (val){                               //(way to call foreach)
 //     console.log(val);
 // } )
 
-// coding.forEach( (item) => {
+// coding.forEach( (item) => {                                  //(arrow function way to call foreach)
 //     console.log(item);
 // } )
 
@@ -12,12 +16,22 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 //     console.log(item);
 // }
 
-// coding.forEach(printMe)
+// coding.forEach(printMe)                                       //(directly passing a funcion(callback) written anywhere)
 
-// coding.forEach( (item, index, arr)=> {
+// coding.forEach( (item, index, arr)=> {                        //(item gives value,index gives index and arr gives complete array)
 //     console.log(item, index, arr);
 // } )
 
+
+
+
+
+
+
+
+
+
+//Traversing the array of objects with for each loop)
 const myCoding = [
     {
         languageName: "javascript",
