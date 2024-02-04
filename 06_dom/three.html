@@ -10,17 +10,19 @@
     
 </body>
 <script>
-    const div = document.createElement('div')
+    const div = document.createElement('div')                                //to create an element in memory
     console.log(div);
-    div.className = "main"
+    div.className = "main"                                                   //to gives class to newly created elemented
     div.id = Math.round(Math.random() * 10 + 1)
-    div.setAttribute("title", "generated title")
+    div.setAttribute("title", "generated title")                             //setAttribute preffered because it set attribute and NOT overwrites it(like className,id)
     div.style.backgroundColor = "green"
     div.style.padding = "12px"
     // div.innerText = "Chai aur code"
-    const addText = document.createTextNode("Chai aur code")
+
+    
+    const addText = document.createTextNode("Chai aur code")                 //another method to create node
     div.appendChild(addText)
 
-    document.body.appendChild(div)
+    document.body.appendChild(div)                                           //now it goes from memory to body(appended)
 </script>
 </html>
