@@ -1,3 +1,51 @@
+<!--NOTES-->
+
+
+<!-- inner text--gives only text that is only visible on screen
+textContent--gives all text wheter it is visible on browser or not by applying css property
+innerHtml--gives content of selected node(tag) wih html tags which is inside that selected node -->
+
+
+
+<!-- querySelector-- gives first of that element,
+use "#" for id and "." for class(ex-document.querySelector('.abc'))
+can also select attribute by it
+
+querySelectorAll-- gives all element  -->
+
+
+
+
+
+
+
+<!-- SELECTING MULTIPLE ITEMS
+querySelectorAll-- gives nodelist of all nodes matching with the query
+
+
+Nodelist-- looks like array but is not,
+it has forEach method
+it is static (when new element added this will not be updated)
+we can't do   [abc.style.color='red'] if abc is has values returned by querySelectorAll()
+we can do     [abc[0].style.color='red'] here we tell to specifically select first from nodelist
+
+getElementsByClassName-- returns HTML collection of nodes
+
+HTML collection-- looks like array but is not,
+it is dynamic,
+
+
+
+
+NOTE-- so to use various array methods on these we convert them to array using Array.from() method
+Array.from(abc);
+after converting them to array ,we can eaily traverse and apply style properties to it
+ -->
+
+
+
+
+<!--***************************************************************************************************************************************************  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,3 +77,9 @@
     </div>
 </body>
 </html>
+
+
+
+
+
+
