@@ -15,10 +15,21 @@
         <div class="day">Thursday</div>
     </div>
 </body>
+
+
+
+
+
+
+
+
+    
 <script>
+
+    
     const parent = document.querySelector('.parent')
     // console.log(parent);
-    // console.log(parent.children);
+    // console.log(parent.children);                                                 (To get all children of the selected node)
     // console.log(parent.children[1].innerHTML);
 
     // for (let i = 0; i < parent.children.length; i++) {
@@ -26,14 +37,21 @@
         
     // }
     parent.children[1].style.color = "orange"
-    // console.log(parent.firstElementChild);
-    // console.log(parent.lastElementChild);
+    // console.log(parent.firstElementChild);                                   (IMP-- to get first child)
+    // console.log(parent.lastElementChild);                                    (to get last child)
 
-    const dayOne = document.querySelector('.day')
-    // console.log(dayOne);
-    // console.log(dayOne.parentElement);
-    // console.log(dayOne.nextElementSibling);
+    const dayOne = document.querySelector('.day')                              
+    // console.log(dayOne);                                                     
+    // console.log(dayOne.parentElement);                                       (to get parent element from child)
+    // console.log(dayOne.nextElementSibling);                                  (to get next sibling element)
 
-    console.log("NODES: ", parent.childNodes);
+     // console.log("NODES: ", parent.childNodes);                              (very imp--- gives nodelist(complex) each linebreak is also counted as a node)
+
+
+
+
+
+
+    
 </script>
 </html>
