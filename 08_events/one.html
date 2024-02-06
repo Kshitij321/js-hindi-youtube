@@ -19,34 +19,64 @@
    </div>
 </body>
 <script>
-    // document.getElementById('owl').onclick = function(){
+    // NOTES-------------------------------------------------------------------------------------------------------
+    // Js is sequentially run language ,runs code in order it is written but events invoke only when an event occurs
+    //HTML onlcick attribute is very bad
+    //We should use eventlistener method as it provides event propagation property
+    //third parameter in eventlistener is 'false' by default ,it denotes event bubbling and event capturing
+    //event bubbling event goes from inside to outside (false is used for it)
+    //event capturing ,event goes from outside to inside (true is used for it)
+
+
+    
+    // document.getElementById('owl').onclick = function(){                           (does not have event bubbling property)
     //     alert("owl clicked")
     // }
 
+
+    
      // attachEvent()
     // jQuery - on
 
+
+    // properties on even object------------------------------------------------------------------------
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    // document.getElementById('images').addEventListener('click', function(e){
+
+
+
+
+    
+
+    // document.getElementById('images').addEventListener('click', function(e){        //mode-event bubbling, when click only this runs
     //     console.log("clicked inside the ul");
     // }, false)
 
-    // document.getElementById('owl').addEventListener('click', function(e){
+    // document.getElementById('owl').addEventListener('click', function(e){            //mode-event bubbling ,when clicked first this runs then also ul(since owl inside ul)
     //     console.log("owl clicked");
     //     e.stopPropagation()
     // }, false)
+
+
+
+
+
     
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
-    //     e.stopPropagation()
+    //     e.stopPropagation()                                                          (stops event bubbling and propagation)
     //     console.log("google clicked");
     // }, false)
    
-    
+
+
+
+
+
+    //ways to remove an element after the event------------------------------------
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);
         if (e.target.tagName === 'IMG') {
