@@ -21,7 +21,7 @@
 
     document.querySelector('#stop').addEventListener('click', function(){                //clearTimeout function clears the setTimeout function call
         clearTimeout(changeMe)                                                           // here we applied clearTimeout on an event ,click on button
-        console.log("STOPPED")
+        console.log("STOPPED")                                                           //NOTE-- setTimeout and SetInterval are not part of core js they are provided by browser to js using window object
     })
 </script>
 </html>
