@@ -6,13 +6,25 @@
     <title>Document</title>
 </head>
 <body style="background-color: #212121;">
-    0	UNSENT	Client has been created. open() not called yet.
-1	OPENED	open() has been called.
-2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-3	LOADING	Downloading; responseText holds partial data.
-4	DONE	The operation is complete.
+  
 </body>
 <script>
+    // before fetch() in js api request sending and fetching was done by AJAX (XML+aysnchronous js) using XMLHttpRequest() to change or update parts of the webpage
+    //we can retrieve not only XML data but more types of data via XMLHttpRequest
+    //XML is markup language (means it is way to represnt some data)
+    //readystate-- state of the request
+    
+//  0	UNSENT	Client has been created. open() not called yet.
+/*  1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.*/
+
+   // READ--https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest  //
+
+
+
+    
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
     const xhr = new XMLHttpRequest();
     xhr.open('GET', requestUrl)
