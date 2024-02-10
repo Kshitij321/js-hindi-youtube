@@ -1,25 +1,36 @@
-const promiseOne = new Promise(function(resolve, reject){
+const promiseOne = new Promise(function(resolve, reject){                                      //one way to create a promise
     //Do an async task
     // DB calls, cryptography, network
     setTimeout(function(){
-        console.log('Async task is compelete');
-        resolve()
+        console.log('Async task is compelete');                
+        resolve()                                                                             // we have to call resolve so that it is called
     }, 1000)
 })
 
-promiseOne.then(function(){
-    console.log("Promise consumed");
+promiseOne.then(function(){                                                                   //we consume a promise by .then 
+    console.log("Promise consumed");                                                          //then is connected with resolve
 })
 
-new Promise(function(resolve, reject){
+
+
+
+
+
+new Promise(function(resolve, reject){                                                                   //directly created promise without storing in variable
     setTimeout(function(){
         console.log("Async task 2");
         resolve()
     }, 1000)
 
-}).then(function(){
+}).then(function(){                                                                                     //directly using .then
     console.log("Async 2 resolved");
 })
+
+
+
+
+
+
 
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function(){
@@ -27,11 +38,20 @@ const promiseThree = new Promise(function(resolve, reject){
     }, 1000)
 })
 
-promiseThree.then(function(user){
+promiseThree.then(function(user){                                                                   //to access data from the resolved promise(we can name anything)
     console.log(user);
 })
 
-const promiseFour = new Promise(function(resolve, reject){
+
+
+
+
+
+
+
+
+
+const promiseFour = new Promise(function(resolve, reject){                                             //use of reject also when to reject
     setTimeout(function(){
         let error = true
         if (!error) {
@@ -42,7 +62,8 @@ const promiseFour = new Promise(function(resolve, reject){
     }, 1000)
 })
 
- promiseFour
+ promiseFour                                                      //.then is connected to resolve, again .then is chained to access data returned by above promise
+                                                                  //.catch is called when promise is rejected and finally always runs 
  .then((user) => {
     console.log(user);
     return user.username
@@ -51,6 +72,16 @@ const promiseFour = new Promise(function(resolve, reject){
 }).catch(function(error){
     console.log(error);
 }).finally(() => console.log("The promise is either resolved or rejected"))
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -65,16 +96,21 @@ const promiseFive = new Promise(function(resolve, reject){
     }, 1000)
 });
 
-async function consumePromiseFive(){
+async function consumePromiseFive(){                                     //we can also use async await to handle promises,not only .this,.catch,.finally is used
     try {
-        const response = await promiseFive
-        console.log(response);
-    } catch (error) {
+        const response = await promiseFive                               //we have to await the async task
+        console.log(response);                                           //problem with async await, it doesnt handle errors,means it always assume promise is being resolved
+    } catch (error) {                                                    //so we have to use try catch method to catch errors
         console.log(error);
     }
 }
 
 consumePromiseFive()
+
+
+
+
+
 
 // async function getAllUsers(){
 //     try {
@@ -89,7 +125,15 @@ consumePromiseFive()
 
 //getAllUsers()
 
-fetch('https://api.github.com/users/hiteshchoudhary')
+
+
+
+
+
+
+fetch('https://api.github.com/users/hiteshchoudhary')                  //IMP- when promise returns eror-404 or else ,so from where it will come either via resolve or reject, it will come in response 
+                                                                       //it will come from reject, only when api call is not able to make
+                                                                       //fetch has a high priority queue hence code with fetch runs first than an other api calls
 .then((response) => {
     return response.json()
 })
