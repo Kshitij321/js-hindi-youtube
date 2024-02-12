@@ -29,6 +29,6 @@ function User(username, loginCount, isLoggedIn){
 }
 
 const userOne = new User("hitesh", 12, true)                  //this way of creating objects from one another is very bad as last one overwrites the previous one hence we use 'new' keyword 
-const userTwo = new User("ChaiAurCode", 11, false)
+const userTwo = new User("ChaiAurCode", 11, false)            //since "new"  creates new instance every time
 console.log(userOne.constructor);
 //console.log(userTwo);
