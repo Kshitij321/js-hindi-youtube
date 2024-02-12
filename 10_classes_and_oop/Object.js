@@ -3,7 +3,15 @@ function multipleBy5(num){
     return num*5
 }
 
-multipleBy5.power = 2
+
+
+//NOTES---------------------------------------------------------------------------------------------------------
+//javascript has prototypal inheritance
+// js keeps on accessing upper level till it gets null, after object it gets null 
+// everything in js is a object, even function,string array means everthing has its own property but we can make everything in js work as objects
+
+
+multipleBy5.power = 2       //(dot access just like objects)
 
 console.log(multipleBy5(5));
 console.log(multipleBy5.power);
@@ -14,6 +22,11 @@ function createUser(username, score){
     this.score = score
 }
 
+
+
+
+
+// we can inject a property in the prototype as "increment" which holds the function just as other default functions
 createUser.prototype.increment = function(){
     this.score++
 }
@@ -21,8 +34,8 @@ createUser.prototype.printMe = function(){
     console.log(`price is ${this.score}`);
 }
 
-const chai = new createUser("chai", 25)
-const tea = createUser("tea", 250)
+const chai = new createUser("chai", 25)             //correct approach ,when we use new keyword it binds the prototype and newly created function to the object methods 
+const tea = createUser("tea", 250)                  // here the newly created function is not bind to the object
 
 chai.printMe()
 
