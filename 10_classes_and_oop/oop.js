@@ -13,13 +13,10 @@ const user = {
 
 
 
-//console.log(user.username)
-//console.log(user.getUserDetails());
-// console.log(this);
 
 
 function User(username, loginCount, isLoggedIn){
-    this.username = username;
+    this.username = username;                                  //whichever object calls it thats variable is "this.username" and "username" is the variable passed onto the function
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn
 
@@ -31,7 +28,7 @@ function User(username, loginCount, isLoggedIn){
     return this
 }
 
-const userOne = new User("hitesh", 12, true)
+const userOne = new User("hitesh", 12, true)                  //this way of creating objects from one another is very bad as last one overwrites the previous one hence we use 'new' keyword 
 const userTwo = new User("ChaiAurCode", 11, false)
 console.log(userOne.constructor);
 //console.log(userTwo);
