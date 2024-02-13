@@ -1,3 +1,5 @@
+//#7
+
 class User {
     constructor(username){
         this.username = username
@@ -10,8 +12,8 @@ class User {
 
 class Teacher extends User{
     constructor(username, email, password){
-        super(username)
-        this.email = email
+        super(username)                                            // here "super" keyword is used to call constructor of the parent class
+        this.email = email                                         //"super" keyword can also be used for various purposes
         this.password = password
     }
 
@@ -27,4 +29,4 @@ const masalaChai = new User("masalaChai")
 
 masalaChai.logMe()
 
-console.log(chai instanceof User);
+console.log(chai instanceof User);                              // to check if chai is instance of User
