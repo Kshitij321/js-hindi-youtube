@@ -1,3 +1,6 @@
+//#13
+//another way to use getter setter
+
 const User = {
     _email: 'h@hc.com',
     _password: "abc",
