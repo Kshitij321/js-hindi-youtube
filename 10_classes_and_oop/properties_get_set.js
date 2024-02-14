@@ -1,3 +1,7 @@
+//#12
+//another way to use getter setter in javascript
+
+
 function User(email, password){
     this._email = email;
     this._password = password
