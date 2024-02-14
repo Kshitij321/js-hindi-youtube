@@ -1,4 +1,7 @@
-const descripter = Object.getOwnPropertyDescriptor(Math, "PI")
+//#10
+
+
+const descripter = Object.getOwnPropertyDescriptor(Math, "PI")                //this tells about properties of the "property" of the object,whether they are iterable,enumerable etc
 
 // console.log(descripter);
 
@@ -18,8 +21,9 @@ const chai = {
 
 console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 
-Object.defineProperty(chai, 'name', {
-    //writable: false,
+Object.defineProperty(chai, 'name', {                               //"Object.defineProperty" is used to change the property of the properties of objects
+    //writable: false,                                              //sometimes we dont want that some people acces to do something with the our objects so we can change their properties
+                                                                    // like "enumerable"(not loopable) and writable(not changeable)
     enumerable: true,
     
 })
