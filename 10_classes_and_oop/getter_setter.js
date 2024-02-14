@@ -24,5 +24,8 @@ class User {
     }
 }
 
-const hitesh = new User("h@hitesh.ai", "abc")
+const hitesh = new User("h@hitesh.ai", "abc")                       
+//So, when you access hitesh.email, it invokes the getter method, 
+//which returns this._email.toUpperCase(). Even though _email isn't directly defined in the class, it's accessible because it's implicitly created when you set this.email = 
+//value in the setter method. This is how JavaScript handles getters and setters behind the scenes.
 console.log(hitesh.email);
