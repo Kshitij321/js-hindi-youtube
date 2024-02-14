@@ -10,7 +10,14 @@
     <button id="green">Green</button>
 </body>
 
-    <script>
+    <script>                                                                                  
+//lexical scoping means if there are two functions nested then inner function will have acces to all things in scope of the outer function
+//but vice versa not true
+
+
+
+        
+        
     // function init() {
     //     let name = "Mozilla"; 
     //     function displayName() {
@@ -20,37 +27,34 @@
     // }
     // init();
 
-    // function outer(){
-    //     let username = "hitesh"
-    //     console.log("OUTER", secret);
-    //     function inner(){
-    //         let secret = "my123"
-    //         console.log("inner", username);
-    //     }
-    //     function innerTwo(){
-    //         console.log("innerTwo", username);
-    //         console.log(secret);
-    //     }
-    //     inner()
-    //     innerTwo()
+   
 
-    // }
-    // outer()
-    // console.log("TOO OUTER", username);
 
+
+
+        
 
     // function makeFunc() {
     //     const name = "Mozilla";
     //     function displayName() {
     //         console.log(name);
-    //     }
+    //     }                                                           //(CLOSURE)here we are returning the inner function reference so it will return complete lexical scope of the inner function means it will have access to outer name when returned
     //     return displayName;
     // }
 
-    // const myFunc = makeFunc();
+    // const myFunc = makeFunc();                       
     // myFunc();
 
     </script>
+
+
+
+
+
+
+
+
+    
     <script>
         // document.getElementById("orange").onclick = function(){
         //     document.body.style.backgroundColor = `orange`
