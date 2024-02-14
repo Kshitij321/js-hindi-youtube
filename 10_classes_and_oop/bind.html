@@ -20,12 +20,12 @@
             //requirement
             document
                 .querySelector('button')
-                .addEventListener('click', this.handleClick.bind(this))
+                .addEventListener('click', this.handleClick.bind(this))                  //bind binds the function to the object from which it is called and returns a copy of the function 
 
         }
         handleClick(){
             console.log("button clicked");
-            console.log(this.server);
+            console.log(this.server);                                                    
         }
     }
 
